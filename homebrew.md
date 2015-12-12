@@ -2,10 +2,10 @@ Homebrew
 ===
 
 `brew update`
-Updates homebrew
+updates homebrew
 
 `brew outdated`
-Check outdated packages
+check outdated packages
 
 `brew upgrade <package>`
-Update package
+update package
