@@ -13,43 +13,56 @@ Starts client.
 `mongoexport -d <database> -c <collection> -o <filename>`  
 Export data to JSON file.
 
-`mongoimport -h [hostname:port] -d <database> -c <collection> --file <filename> [--drop]` 
+`mongoimport -h [hostname:port] -d <database> -c <collection> --file <filename> [--drop]`
 Import data from JSON file.
 
 ## Working with databases
 
 OBS.: Commands inside mongo client.
 
-List databases:
-```
-show dbs
-```
+`show dbs`  
+List databases.
 
-List collections:
-```
-show collections
-```
+`show collections`  
+List collections.
 
-Choose database:
-```
-use <database>
-```
+`use <database>`  
+Choose database.
 
 ### Insert
 
-Insert data:
-```
-db.<collection>.insert(<JSON data>)
-```
+`db.<collection>.insert(<JSON data>)`  
+Insert data.
 
-Save (insert if new or update if existing):
-```
-db.<collection>.save(<JSON data>)
-```
+`db.<collection>.save(<JSON data>)`  
+Save (insert if new or update if existing).
 
 ### Find
 
-Find records (leave query blank to bring all):
+`db.<collection>.find(<query>, <fields>)`  
+Find records (leave query blank to bring all). Returns a cursor (.hasNext(), .next()).
+Example: `db.pokemons.find({ name: 'Pikachu' }, { name: 1, description: 1 })`
+
+`db.<collection>.findOne(<query>)`  
+Find one record. Returns an object.
+
+#### Operators
+
+`$lt, $lte, $gt, $gte`  
+`$or, $nor, $and, $nand`  
+
+Example:
+
+```javascript
+db.pokemons.find({
+    $and: [{
+        attack: { $gt: 5 }
+    }, {
+        defense: { $lt: 2 }
+    }]
+})
 ```
-db.<collection>.find(<query>)
-```
+
+`$exists`  
+
+Example: `db.pokemons.find({ description: { $exists: true }})`
