@@ -1,11 +1,14 @@
 Homebrew
 ===
 
-`brew update`
-updates homebrew
+`brew update`  
+Updates homebrew
 
-`brew outdated`
-check outdated packages
+`brew outdated`  
+Check outdated packages
 
-`brew upgrade <package>`
-update package
+`brew upgrade <package>`  
+Update package
+
+`brew list`  
+List packages

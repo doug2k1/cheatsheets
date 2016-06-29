@@ -30,7 +30,7 @@ knife cookbook upload learn_chef_apache2
 knife cookbook list
 
 ## connect to local vagrant vm
-ssh -i /Users/doug2k1/projects/cheatsheets/chef/.vagrant/machines/default/virtualbox/private_key -l vagrant -p 2222 localhost
+ssh -i /Users/doug2k1/projects/cheatsheets/chef/.vagrant/machines/default/virtualbox/private_key -l vagrant -p 2200 localhost
 
 ## bootstrap local machine
-knife bootstrap localhost --ssh-port 2222 --ssh-user vagrant --sudo --identity-file /Users/doug2k1/projects/cheatsheets/chef/.vagrant/machines/default/virtualbox/private_key --node-name node1 --run-list 'recipe[learn_chef_apache2]'
+knife bootstrap localhost --ssh-port 2200 --ssh-user vagrant --sudo --identity-file /Users/doug2k1/projects/cheatsheets/chef/.vagrant/machines/default/virtualbox/private_key --node-name node1 --run-list 'recipe[learn_chef_apache2]'
