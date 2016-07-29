@@ -1,13 +1,18 @@
 # Docker
 
-## Install
-
-Docker for Mac
-
 ## Images
 
 `docker images`  
 List images
+
+`docker pull <image>`  
+Download a image
+
+`docker images`  
+List existing images
+
+`docker rmi <id-or-name>`  
+Remove a image
 
 ## Containers
 
@@ -32,4 +37,4 @@ Remove container (needs only first 4 characters of id or the name)
 Pulls image from hub, create a container and run it
 
 `docker run -d -p 80:80 --name web nginx`  
-Pulls, build and run nginx, detached (-d), mapping port from container to client (-p 8:80), with a name (--name web)
+Pulls, build and run nginx, detached (-d), mapping port from container to client (-p 80:80), with a name (--name web)
