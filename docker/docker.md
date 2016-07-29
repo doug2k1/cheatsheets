@@ -14,7 +14,10 @@ Remove a image
 ## Containers
 
 `docker run`  
-Run container from image.
+Run container from image.  
+  -p 80:80 (expose port external:internal)  
+  -v /var/www (mount volume at this location)  
+  -v $(pwd):/var/www (mount volume from pwd (current folder) to /var/www)
 
 `docker stop <id-or-name>`  
 Stops a running container.
@@ -28,6 +31,9 @@ List all containers.
 `docker rm <id-or-name>`
 Remove container (needs only first 4 characters of id or the name)
 
+`docker inspect <id-or-name>`  
+Info about the container.
+
 ## Examples
 
 `docker run hello-world`
@@ -35,3 +41,6 @@ Pulls image from hub, create a container and run it
 
 `docker run -d -p 80:80 --name web nginx`  
 Pulls, build and run nginx, detached (-d), mapping port from container to client (-p 80:80), with a name (--name web)
+
+`docker run --rm -p 8000:8000 -v $(pwd):/var/www -w /var/www node npm start`  
+NodeJS app
