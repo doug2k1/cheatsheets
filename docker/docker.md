@@ -42,5 +42,5 @@ Pulls image from hub, create a container and run it
 `docker run -d -p 80:80 --name web nginx`  
 Pulls, build and run nginx, detached (-d), mapping port from container to client (-p 80:80), with a name (--name web)
 
-`docker run --rm -p 8000:8000 -v $(pwd):/var/www -w /var/www node npm start`  
+`docker run --rm -it -p 80:3000 -v $(pwd):/var/www -w /var/www node npm start`  
 NodeJS app
