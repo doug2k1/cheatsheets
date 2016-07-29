@@ -2,9 +2,6 @@
 
 ## Images
 
-`docker images`  
-List images
-
 `docker pull <image>`  
 Download a image
 
