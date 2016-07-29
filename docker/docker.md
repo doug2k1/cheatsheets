@@ -16,7 +16,7 @@ Remove a image
 `docker run`  
 Run container from image.  
   -p 80:80 (expose port external:internal)  
-  -v /var/www (mount volume at this location)  
+  -v /var/www (mount volume at this location - Docker managed volume on host machine)  
   -v $(pwd):/var/www (mount volume from pwd (current folder) to /var/www)
 
 `docker stop <id-or-name>`  
@@ -28,8 +28,9 @@ List running containers.
 `docker ps -a`
 List all containers.
 
-`docker rm <id-or-name>`
-Remove container (needs only first 4 characters of id or the name)
+`docker rm <id-or-name>`  
+Remove container (needs only first 4 characters of id or the name)  
+  -v (also remove Docker managed volums)  
 
 `docker inspect <id-or-name>`  
 Info about the container.
