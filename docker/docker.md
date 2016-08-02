@@ -47,6 +47,14 @@ See container logs.
 `docker build -t <user/image> .`  
 Build image from Docker file in current folder.
 
+## Network
+
+`docker network create --driver bridge <name>`  
+Create a custom bridge network.
+
+`docker run -d --net=<network-name>  --name mondodg mongo`  
+Run container in the network.
+
 ## Examples
 
 `docker run hello-world`
