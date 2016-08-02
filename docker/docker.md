@@ -26,7 +26,7 @@ Stops a running container.
 `docker ps`  
 List running containers.
 
-`docker ps -a`
+`docker ps -a`  
 List all containers.
 
 `docker rm <id-or-name>`  
@@ -54,6 +54,9 @@ Create a custom bridge network.
 
 `docker run -d --net=<network-name>  --name mondodg mongo`  
 Run container in the network.
+
+`docker network ls` 
+List available networks.
 
 ## Examples
 
