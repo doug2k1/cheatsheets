@@ -58,6 +58,9 @@ Run container in the network.
 `docker network ls` 
 List available networks.
 
+`docker network inspect <network-name>`  
+Show info about the network.
+
 ## Examples
 
 `docker run hello-world`
