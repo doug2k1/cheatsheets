@@ -35,6 +35,14 @@ Remove container (needs only first 4 characters of id or the name)
 `docker inspect <id-or-name>`  
 Info about the container.
 
+`docker exec <container-name> <command>`  
+Run a command inside a container.
+
+## Dockerfile
+
+`docker build -t <user/image> .`  
+Build image from Docker file in current folder.
+
 ## Examples
 
 `docker run hello-world`
