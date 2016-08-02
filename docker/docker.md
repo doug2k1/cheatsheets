@@ -17,7 +17,8 @@ Remove a image
 Run container from image.  
   -p 80:80 (expose port external:internal)  
   -v /var/www (mount volume at this location - Docker managed volume on host machine)  
-  -v $(pwd):/var/www (mount volume from pwd (current folder) to /var/www)
+  -v $(pwd):/var/www (mount volume from pwd (current folder) to /var/www)  
+  --link <other-name:alias> (link to another running container)  
 
 `docker stop <id-or-name>`  
 Stops a running container.
