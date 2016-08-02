@@ -39,6 +39,9 @@ Info about the container.
 `docker exec <container-name> <command>`  
 Run a command inside a container.
 
+`docker logs <container>`  
+See container logs.
+
 ## Dockerfile
 
 `docker build -t <user/image> .`  
