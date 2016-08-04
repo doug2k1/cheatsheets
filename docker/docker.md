@@ -61,6 +61,14 @@ List available networks.
 `docker network inspect <network-name>`  
 Show info about the network.
 
+## Compose
+
+`docker-compose build`  
+Build services from docker-compose.yml.  
+
+`docker-compose up`  
+Start services.  
+
 ## Examples
 
 `docker run hello-world`
