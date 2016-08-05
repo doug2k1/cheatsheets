@@ -79,3 +79,6 @@ Pulls, build and run nginx, detached (-d), mapping port from container to client
 
 `docker run --rm -it -p 80:3000 -v $(pwd):/var/www -w /var/www node npm start`  
 NodeJS app
+
+`docker rmi $(docker images -f "dangling=true" -q)`  
+Remove dangling images.
