@@ -11,6 +11,11 @@ List existing images
 `docker rmi <id-or-name>`  
 Remove a image
 
+### Examples
+
+`docker rmi $(docker images -f "dangling=true" -q)`  
+Remove dangling images.
+
 ## Containers
 
 `docker run`  
@@ -41,6 +46,33 @@ Run a command inside a container.
 
 `docker logs <container>`  
 See container logs.
+
+### Examples
+
+`docker rm $(docker ps -a -q)`  
+Remove all stopped containers.  
+
+## Volumes
+
+`docker volume create --name hello`  
+Create a new volume.
+
+`docker volume ls`  
+List volumes.
+
+`docker volume ls -f dangling=true`  
+List dangling volumes.
+
+`docker volume rm hello`  
+Remove volume.
+
+### Examples
+
+`docker run -d -v hello:/world busybox ls /world`
+Create a container using the `hello` volume.
+
+`docker volume rm $(docker volume ls -f "dangling=true" -q)`  
+Remove dangling volumes.
 
 ## Dockerfile
 
@@ -79,6 +111,3 @@ Pulls, build and run nginx, detached (-d), mapping port from container to client
 
 `docker run --rm -it -p 80:3000 -v $(pwd):/var/www -w /var/www node npm start`  
 NodeJS app
-
-`docker rmi $(docker images -f "dangling=true" -q)`  
-Remove dangling images.
