@@ -169,3 +169,10 @@ NodeJS app
 ```
 $ docker run --rm -it -p 80:3000 -v $(pwd):/var/www -w /var/www node npm start
 ```
+
+## System
+
+Remove all stopped containers, danling images, build cache, etc
+```
+$ docker system prune
+```
