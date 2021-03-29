@@ -76,9 +76,9 @@ Info about the container
 $ docker inspect <id-or-name>
 ```
 
-Run a command inside a container
+Run a command inside a container (-it for interactive terminal)
 ```
-$ docker exec <container-name> <command>
+$ docker exec -it <container-name> <command>
 ```
 
 See container logs
