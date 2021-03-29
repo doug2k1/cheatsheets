@@ -44,9 +44,14 @@ Starts an existing container (-a to attach and display the output)
 $ docker start -a <id-or-name>
 ```
 
-Stops a running container
+Stops a running container (gracefully)
 ```
 $ docker stop <id-or-name>
+```
+
+Kill a running container
+```
+$ docker kill <id-or-name>
 ```
 
 List running containers
