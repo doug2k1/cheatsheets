@@ -39,6 +39,11 @@ Options:
 -v $(pwd):/var/www (mount volume from pwd (current folder) to /var/www)  
 --link <other-name:alias> (link to another running container)  
 
+Starts an existing container (-a to attach and display the output)
+```
+$ docker start -a <id-or-name>
+```
+
 Stops a running container
 ```
 $ docker stop <id-or-name>
