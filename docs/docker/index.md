@@ -93,6 +93,11 @@ Remove all stopped containers.
 $ docker rm $(docker ps -a -q)
 ```
 
+Run shell inside aq container
+```
+$ docker exec -it <container-name> sh (or bash, zsh, powershell)
+```
+
 ## Volumes
 
 Create a new volume
